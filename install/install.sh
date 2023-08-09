@@ -28,11 +28,18 @@ sed -i "s/<accesspassword>/$PASSWORD/g" /root/config/mosquitto.conf
 cp /root/init.d/* /etc/init.d
 cp /root/config/mosquitto.conf /etc/mosquitto/mosquitto.conf
 
+echo "Enabling GPS"
+uci set gps.gpsd.enabled='1'    
+uci set gps.gpsd.galileo_sup='1'    
+uci set gps.gpsd.glonass_sup='7'    
+uci set gps.gpsd.beidou_sup='3'
+
 /etc/init.d/losant_rutio enable
 /etc/init.d/losant_command enable
 /etc/init.d/losant_gps enable
 /etc/init.d/losant_solar enable
 /etc/init.d/losant_comap enable
+/etc/init.d/losant_gps enable
 
 echo -e "\n"
 echo "Make sure to set the static lease for "comap" at ***.***.***.051"
