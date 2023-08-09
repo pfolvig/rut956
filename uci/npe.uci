@@ -19,11 +19,9 @@ config comap 'comap'
 	option enabled '1'
 	option registers 'comap_registers'
 
-config dio_in 'dio_in'
+config dio 'dio'
 	option enabled '1'
-
-config dio_out 'dio_out'
-	option enabled '1'
+	option interval '60'
 
 config gps 'gps'
 	option enabled '1'

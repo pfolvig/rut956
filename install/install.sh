@@ -52,7 +52,7 @@ fi
 case $choice in
     [yY]* )
         echo "Rebooting now..."
-        sudo reboot
+        reboot
         ;;
     [nN]* )
         echo "Not rebooting."

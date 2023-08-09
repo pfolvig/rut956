@@ -2,6 +2,7 @@
 #!/bin/ash
 . /rom/usr/share/libubox/jshn.sh
 topic=`uci get npe.losant.remote_clientid`
+interval=`uci get npe.dio.interval`
 
 while [ true ]; do      
         PAYLOAD=`ubus call ioman.gpio.din1 status`
@@ -35,6 +36,6 @@ while [ true ]; do
 	json_add_string "reg_source" "rutio"
 	msg=`json_dump`
 	mosquitto_pub -h localhost -m "${msg}"  -t losant/${topic}/state
-	sleep 4
+	sleep ${interval}
 done
 
