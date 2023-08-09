@@ -1,0 +1,20 @@
+#!/bin/ash /etc/rc.common
+USE_PROCD=1
+ 
+START=95
+STOP=01
+ 
+start_service() {
+    procd_open_instance
+    procd_set_param command /bin/ash "/root/bin/losant_command.sh"
+    procd_set_param stdout 1
+    procd_set_param stderr 1
+	procd_set_param respawn
+    procd_close_instance
+}
+
+stop_service() {
+        pgrep -f losant_command.sh | xargs kill
+		pgrep -f "sub -t losant" | xargs kill
+}
+

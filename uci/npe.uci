@@ -1,0 +1,30 @@
+package npe
+
+config asset 'asset'
+	option assetno 'RUT956'
+	option description 'Testing the RUT956 Modem'
+
+config solar 'solar'
+	option enabled '1'
+	option interval '60'
+	option port '/dev/ttyATH0'
+
+config losant 'losant'
+	option enabled '1'
+	option remote_clientid '6476e13df9cfa12eb004efcb'
+	option remote_username '27ade8c4-61a1-403c-a344-6ddd06f39102'
+	option remote_password '7edc85867349c9a573bf04be3c521c10054f3df6a66be16660ac2db59b07ba4b'
+
+config comap 'comap'
+	option enabled '1'
+	option registers 'comap_registers'
+
+config dio_in 'dio_in'
+	option enabled '1'
+
+config dio_out 'dio_out'
+	option enabled '1'
+
+config gps 'gps'
+	option enabled '1'
+
