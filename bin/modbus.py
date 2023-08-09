@@ -57,13 +57,11 @@ def get_alarms(client, x):
     result = []
     
     for i in range(x):
-        try:
-            
+        try:            
             res = client.execute(1,cst.READ_HOLDING_REGISTERS,6668 + (i*25), 25)
-            value = struct.pack(">" + "I" * (len(res)), *res).replace('\x00', '')
+            value = struct.pack(">" + "I" * (len(res)), *res).replace(b'\x00',b'').decode("utf-8")
     
-            result.append(value)
-            
+            result.append(value)            
         except Exception as e:
             break
             

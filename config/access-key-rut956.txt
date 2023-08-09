@@ -1,8 +1,0 @@
-Access Key:
-27ade8c4-61a1-403c-a344-6ddd06f39102
-
-Access Secret:
-7edc85867349c9a573bf04be3c521c10054f3df6a66be16660ac2db59b07ba4b
-
-Device ID:
-6476e13df9cfa12eb004efcb
