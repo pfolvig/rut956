@@ -8,7 +8,7 @@ while [ true ]; do
 	echo $1
 	json_init
 	json_add_object "data"
-	json_add_string "M_GPS" "$1,$2" 
+	json_add_string "M_GPS" "$1,$2"
 	json_add_double "M_ALTITUDE" $3
 	json_add_double "M_VELOCITY" $4
 	json_add_double "M_ACCURACY" $5
@@ -18,6 +18,6 @@ while [ true ]; do
 
 	msg=`json_dump`
 	echo $msg
-	mosquitto_pub -h localhost -m "${msg}"  -t ${topic}
+	mosquitto_pub -h localhost -m "${msg}"  -t losant/${topic}/state
 	sleep 300
 done
