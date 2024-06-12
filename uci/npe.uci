@@ -1,19 +1,19 @@
 package npe
 
 config asset 'asset'
-	option assetno ''
-	option description ''
+	option assetno '<asset_number>'
+	option description '<asset_description>'
 
 config solar 'solar'
-	option enabled '1'
+	option enabled '0'
 	option interval '60'
 	option port '/dev/ttyATH0'
 
 config losant 'losant'
 	option enabled '1'
-	option remote_clientid 'deviceid'
-	option remote_username 'deviceaccesskey'
-	option remote_password 'devicepassword'
+	option remote_clientid '<device_id>'
+	option remote_username '<access_key>'
+	option remote_password '<access_password>'
 
 config comap 'comap'
 	option enabled '1'

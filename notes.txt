@@ -1,0 +1,5 @@
+package_target
+https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt76x8/packages/Packages.gz
+
+last_working_firmware
+RUT9M_R_00.07.07.1
