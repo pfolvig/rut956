@@ -137,8 +137,8 @@ def main(args):
         if payload.get("alarms",0):
             payload.update(get_alarms(master, payload.get("alarms")))
             
-        #payload = json.dumps({"data":payload})
-        payload = json.dumps(payload)
+        payload = json.dumps({"data":payload})
+        #payload = json.dumps(payload)
         publish(args.topic,payload)
         print(args.topic,payload)
         if not hasattr(master,'_serial') :
