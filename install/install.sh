@@ -56,7 +56,7 @@ uci add_list firewall.25.src_ip='192.168.28.0/24'
 uci add_list firewall.25.src_ip='192.168.4.0/23'
 uci set firewall.25.extra='-m policy --dir in --pol ipsec --mode tunnel --tunnel-dst 0.0.0.0/0 --tunnel-src 0.0.0.0/0'
 # enable ssh wan
-firewall.15.enabled='1'
+uci set firewall.15.enabled='1'
 uci commit
 
 # reload the firewall daemon
