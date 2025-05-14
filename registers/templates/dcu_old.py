@@ -82,7 +82,7 @@ registers = [
             12:'In LOC',
             13:'CPU Ready',
             14:'not_used_3',
-            15:'Idle/Nominal',
+            15:'Idle_Nominal',
         }),
     }),
 

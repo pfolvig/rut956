@@ -28,6 +28,10 @@ sed -i "s/<accesspassword>/$PASSWORD/g" /root/config/mosquitto.conf
 cp /root/init.d/* /etc/init.d
 cp /root/config/mosquitto.conf /etc/mosquitto/mosquitto.conf
 
+mkdir -p /etc/mosquitto/certs
+cp /root/certs/Losant_CA.crt /etc/mosquitto/certs/
+chmod 644 /etc/mosquitto/certs/Losant_CA.crt
+
 echo "Enabling GPS"
 uci set gps.gpsd.enabled='1'    
 uci set gps.gpsd.galileo_sup='1'    
